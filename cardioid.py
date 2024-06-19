@@ -1,7 +1,13 @@
 import manim as bb
 import numpy as np
 
-from polar_utils import plot_polar_curve
+from polar_utils import (
+    plot_polar_curve,
+    cos_lima_card_pos,
+    cos_lima_card_neg,
+    sin_lima_card_pos,
+    sin_lima_card_neg,
+)
 
 
 class CardioidScene(bb.Scene):
@@ -31,22 +37,6 @@ class CardioidScene(bb.Scene):
             bb.Transform(card_intro_rect1, card_intro_rect2), bb.FadeOut(card_intro1)
         )
         self.play(bb.Write(card_intro2))
-
-        def cos_lima_card_pos(theta):
-            r = 0.5 + 0.5 * np.cos(theta)
-            return r
-
-        def cos_lima_card_neg(theta):
-            r = 0.5 - 0.5 * np.cos(theta)
-            return r
-
-        def sin_lima_card_pos(theta):
-            r = 0.5 + 0.5 * np.sin(theta)
-            return r
-
-        def sin_lima_card_neg(theta):
-            r = 0.5 - 0.5 * np.sin(theta)
-            return r
 
         cos_card_plot_p = plot_polar_curve(cos_lima_card_pos, color=bb.GOLD)
         cos_card_func_txt_p = bb.Tex(

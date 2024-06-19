@@ -1,7 +1,13 @@
 import manim as bb
 import numpy as np
 
-from polar_utils import plot_polar_curve
+from polar_utils import (
+    plot_polar_curve,
+    cos_lima_dimp_pos,
+    cos_lima_dimp_neg,
+    sin_lima_dimp_pos,
+    sin_lima_dimp_neg,
+)
 
 
 class DimpledScene(bb.Scene):
@@ -31,22 +37,6 @@ class DimpledScene(bb.Scene):
         )
         self.play(bb.Write(dimp_intro2))
         self.wait(2)
-
-        def cos_lima_dimp_pos(theta):
-            r = 1 + 0.5 * np.cos(theta)
-            return r
-
-        def cos_lima_dimp_neg(theta):
-            r = 1 - 0.5 * np.cos(theta)
-            return r
-
-        def sin_lima_dimp_pos(theta):
-            r = 1 + 0.5 * np.sin(theta)
-            return r
-
-        def sin_lima_dimp_neg(theta):
-            r = 1 - 0.5 * np.sin(theta)
-            return r
 
         cos_dimp_plot_p = plot_polar_curve(cos_lima_dimp_pos, color=bb.GOLD)
         cos_dimp_func_txt_p = bb.Tex(

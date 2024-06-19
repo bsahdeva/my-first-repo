@@ -1,20 +1,12 @@
 import manim as bb
 import numpy as np
 
-from polar_utils import plot_polar_curve
+from polar_utils import plot_polar_curve, sin_unit_circle_pos, sin_unit_circle_neg
 
 
 class SinCircleScene(bb.Scene):
 
     def construct(self):
-
-        def sin_unit_circle_pos(theta):
-            r = 2 * np.sin(theta)
-            return r
-
-        def sin_unit_circle_neg(theta):
-            r = -2 * np.sin(theta)
-            return r
 
         self.add(bb.NumberPlane())
 

@@ -1,7 +1,13 @@
 import manim as bb
 import numpy as np
-import functools
-from polar_utils import plot_polar_curve
+
+from polar_utils import (
+    plot_polar_curve,
+    cos_lima_looped_pos,
+    cos_lima_looped_neg,
+    sin_lima_looped_pos,
+    sin_lima_looped_neg,
+)
 
 
 class LoopedScene(bb.Scene):
@@ -87,22 +93,6 @@ class LoopedScene(bb.Scene):
         self.play(bb.Transform(intro_rect1, intro_rect8), bb.FadeOut(intro7))
         self.play(bb.Write(intro8))
         self.wait(2)
-
-        def cos_lima_looped_pos(theta):
-            r = 0.5 + 1.5 * np.cos(theta)
-            return r
-
-        def cos_lima_looped_neg(theta):
-            r = 0.5 - 1.5 * np.cos(theta)
-            return r
-
-        def sin_lima_looped_pos(theta):
-            r = 0.5 + 1.5 * np.sin(theta)
-            return r
-
-        def sin_lima_looped_neg(theta):
-            r = 0.5 - 1.5 * np.sin(theta)
-            return r
 
         cos_loop_plot_p = plot_polar_curve(cos_lima_looped_pos, color=bb.GOLD)
         cos_loop_func_txt_p = bb.Tex(

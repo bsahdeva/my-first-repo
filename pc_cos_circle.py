@@ -1,21 +1,13 @@
 import manim as bb
 import numpy as np
 
-from polar_utils import plot_polar_curve
-
-def cos_unit_circle_pos(theta):
-    r = 2 * np.cos(theta)
-    return r
-
-def cos_unit_circle_neg(theta):
-    r = -2 * np.cos(theta)
-    return r
+from polar_utils import plot_polar_curve, cos_unit_circle_pos, cos_unit_circle_neg
 
 
 class CosCircleScene(bb.Scene):
 
     def construct(self):
-        
+
         self.add(bb.NumberPlane())
 
         intro = bb.Tex(
