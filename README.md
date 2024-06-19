@@ -16,7 +16,7 @@ $r(\theta) = a$
 
 ![](assets/CircleCurve_ManimCE_v0.18.1.png)
 
-[pc_simple_circle.py](./pc_simple_circle.py)
+[simple_circle.py](./simple_circle.py)
 
 #### Circle generated with $\cos(\theta)$
 
@@ -24,7 +24,7 @@ $r(\theta) = a \cdot \cos(\theta)$
 
 ![](assets/CosCircleCurve_ManimCE_v0.18.1.png)
 
-[pc_cos_circle.py](./pc_cos_circle.py)
+[cos_circle.py](./cos_circle.py)
 
 #### Circle generated with $\sin(\theta)$
 
@@ -32,7 +32,7 @@ $r(\theta) = a \cdot \sin(\theta)$
 
 ![](assets/SinCircleCurve_ManimCE_v0.18.1.png)
 
-[pc_sin_circle.py](./pc_sin_circle.py)
+[sin_circle.py](./sin_circle.py)
 
 ### Limacons
 
