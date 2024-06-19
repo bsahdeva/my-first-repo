@@ -1,32 +1,11 @@
 import manim as bb
 import numpy as np
-import functools
 
-# converts given polar function from polar to rectangular
-def parametric_func(t, polar_func):
-    r = polar_func(t)
-    return [
-        r * np.cos(t),
-        r * np.sin(t),
-        0
-    ]
+from polar_utils import plot_polar_curve
 
 class RoseScene(bb.Scene):
 
     def construct(self):
-
-        def plot_polar_curve(polar_func, color = bb.RED, t_range = [0, 2 * bb.PI]):
-            
-            fn = functools.partial(parametric_func, polar_func = polar_func)
-            
-            # creates polar curve by putting x and y into a parametric function
-            polar_curve = bb.ParametricFunction(
-                fn,
-                t_range = t_range,
-                color = color
-            )
-
-            return polar_curve
         
         self.add(bb.NumberPlane())
 
