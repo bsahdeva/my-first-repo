@@ -4,7 +4,7 @@ import numpy as np
 from polar_utils import plot_polar_curve
 
 
-class CircleScene(bb.Scene):
+class SinCircleScene(bb.Scene):
 
     def construct(self):
 
